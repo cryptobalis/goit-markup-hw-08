@@ -1,0 +1,108 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $footer-bg-color;
+
+    &__thumb {
+      min-width: 231px;
+    }
+    
+    &__logo {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 1.19;
+      letter-spacing: 0.03em;
+      color: $primary-white-color;
+    }
+    
+    &__address {
+      margin-top: 20px;
+    }
+    
+    &__contacts {
+      margin-top: 9px;
+    }
+
+    &__container {
+      display: flex;
+      align-items: baseline;
+    }
+    &__media {
+      margin-left: 70px;
+    }
+    &__join {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: $primary-white-color;
+      margin-bottom: 20px;
+    }
+  
+  }
+  
+ 
+  
+  .footer__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+
+    &--address {
+      color: $primary-white-color;
+    
+      transition-property: color;
+      transition-duration: 250ms;
+      transition-timing-function: $cubic;
+    }
+    
+    &--contacts {
+      color: $footer-contacts-color;
+    
+      transition-property: color;
+      transition-duration: 250ms;
+      transition-timing-function: $cubic;
+    }
+    
+    &--address:hover,
+    &--address:focus,
+    &--contacts:hover,
+    &--contacts:focus {
+      color: $accent-color;
+    }
+  }
+  
+
+
+  .footer__media-link {
+    display: flex;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: $footer-media-bg-color;
+    justify-content: center;
+    align-items: center;
+    fill: $primary-white-color;
+  
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: $cubic;
+
+    &:last-child {
+      margin-right: 0;
+    }
+    
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+    }
+  }
+  
+ 

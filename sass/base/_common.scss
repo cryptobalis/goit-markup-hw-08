@@ -1,0 +1,42 @@
+body {
+    font-family: 'Roboto', 'Raleway', sans-serif;
+    color: $primary-text-color;
+    background-color: $primary-white-color;
+  }
+
+
+  .link {
+    text-decoration: none;
+  }
+  
+  .list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .web {
+    color: $accent-color;
+  }
+
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .links-list {
+    padding: 0;
+    display: flex;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+    gap: 10px;
+  }
+
+
+  
+
+  

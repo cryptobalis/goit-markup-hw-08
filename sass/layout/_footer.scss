@@ -3,50 +3,85 @@
     padding-bottom: 60px;
     background-color: $footer-bg-color;
 
-    &__thumb {
-      min-width: 231px;
-    }
+    &__container {
+
+      @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
+
+        column-gap: 165px;
+       } 
+
+
+      @media screen and (min-width: $desktop) {
+
+        flex-wrap: nowrap;
+        gap: 0;
+      } 
+   }
+ 
     
     &__logo {
+      @extend %link;
+
+      margin-bottom: 20px;
+
+      text-align: center;
+
       font-family: 'Raleway', sans-serif;
       font-weight: 700;
       font-size: 26px;
       line-height: 1.19;
       letter-spacing: 0.03em;
       color: $primary-white-color;
-    }
-    
-    &__address {
-      margin-top: 20px;
-    }
-    
-    &__contacts {
-      margin-top: 9px;
+
+      @media screen and (min-width: $desktop) {
+
+        text-align: left;
+        
+      }
     }
 
-    &__container {
-      display: flex;
-      align-items: baseline;
-    }
-    &__media {
-      margin-left: 70px;
-    }
-    &__join {
-      font-style: normal;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 16px;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      color: $primary-white-color;
-      margin-bottom: 20px;
-    }
-  
   }
+
+
+
   
- 
+  .footer-contacts {
+
+      margin-bottom: 60px;
+
+      min-width: 231px;
+
+    @media screen and (min-width: $tablet) {
+
+      margin-bottom: 0;
+      
+    }
+
+    &__address {
+      margin: 0;
+    }  
   
-  .footer__link {
+    &__list {
+      @extend %list;
+
+      text-align: center;
+
+      @media screen and (min-width: $desktop) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;   
+      }
+    }
+  }
+
+  .footer-contacts__link {
+
+    @extend %link;
+
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -68,36 +103,59 @@
       transition-duration: 250ms;
       transition-timing-function: $cubic;
     }
+
     
     &--address:hover,
     &--address:focus,
     &--contacts:hover,
     &--contacts:focus {
+
       color: $accent-color;
     }
-  }
+  } 
+
+
+
   
+  .footer-media {
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 70px;
+        
+    }
 
 
-  .footer__media-link {
+    &__join {
+      text-align: center;
+
+      margin-bottom: 20px;
+  
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.142;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+
+      color: $primary-white-color;
+      
+    }
+
+}
+
+  .footer-media__link {
     display: flex;
-    padding: 0;
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    margin-right: 10px;
     background-color: $footer-media-bg-color;
     justify-content: center;
     align-items: center;
+
     fill: $primary-white-color;
   
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: $cubic;
-
-    &:last-child {
-      margin-right: 0;
-    }
     
     &:hover,
     &:focus {
@@ -105,4 +163,119 @@
     }
   }
   
+
+
+  .footer-subscribe {
+
+    margin-top: 60px;
+
+    @media screen and (min-width: $desktop) {
+
+        margin-left: 93px;
+        margin-top: 0;
+        
+    }
+   
+
+    &__form {
+
+        @media screen and (min-width: $desktop) {
+            display: flex;
+        }
+     
+    }
+    
+    &__title {
+
+        text-align: center;
+      margin-bottom: 20px;
+    
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: $primary-white-color;
+    }
+  
+    &__icon {
+      margin-left: 10px;
+      fill: $primary-white-color;
+    }
+  }
+  
+  
+  .footer-subscribe__input {
+    padding: 15px 16px;
+
+    margin-bottom: 20px;
+  
+    width: 450px;
+    height: 50px;
+
+
+    @media screen and (min-width: $desktop) {
+
+        width: 358px;
+        
+    }
+   
+  
+    border: 1px solid $footer-subscribe-border;
+    border-radius: 4px;
+    color: $primary-white-color;
+    background-color: $footer-bg-color;
+
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+    
+      color: $footer-contacts-color;
+    }
+
+  }
+  
  
+  
+  .footer-subscribe__button {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 28px;
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 12px;
+        
+    }
+    
+    width: 200px;
+    height: 50px;
+      
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+
+    color: $primary-white-color;
+    background: $accent-color;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-width: 0;
+
+   
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: $cubic;
+
+    &:hover,
+    &:focus {
+      background-color: $modal-hover-btn;
+    }
+  }
+  

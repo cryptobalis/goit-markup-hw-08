@@ -18,6 +18,7 @@
     &__position {
       margin-top: 10px;
       margin-bottom: 16px;
+
       font-weight: 400;
       font-size: 16px;
       line-height: 1.1875;
@@ -26,10 +27,14 @@
     }
 
     &__list {
+
+      @extend %list;
+
       display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
     }
-    
-  }
+}
   
   
   .team__item {
@@ -38,8 +43,19 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
-    & + & {
-      margin-left: 30px;
+
+      @media screen and (min-width: $tablet) {
+
+        flex-basis: calc((100% - 30px) / 2);
+
+        margin-bottom: 0;
+      
+    }
+
+      @media screen and (min-width: $desktop) {
+
+        flex-basis: calc((100% - 3*30px) / 4);
+
     }
   }
   
@@ -68,6 +84,4 @@
       fill: $primary-white-color;
     }
   }
-  
- 
   

@@ -1,12 +1,27 @@
 .filter-list {
-    margin-bottom: 50px;
+    @extend %list;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    row-gap: 15px;
 
-    &__item + &__item {
-      margin-left: 8px;
+    margin-bottom: 40px;
+
+    width: 80%;
+
+    @media screen and (min-width: $tablet) {
+        justify-content: center; 
+        margin-bottom: 30px;
+
+        width: 100%;
+           
     }
-    
+
+    @media screen and (min-width: $desktop) {
+
+        margin-bottom: 50px;         
+    }
+
   }
 
   .filter-list__button {
@@ -39,13 +54,25 @@
 
   
 
-  
-
   .project-list {
-    display: flex;
-    flex-wrap: wrap;
+
+     @extend %list;
+
+     display: flex;
+     flex-wrap: wrap;
+     gap: 30px;
+
+    &__thumb {
+      position: relative;
+      overflow: hidden;
+
+
+
+    }
 
     &__border {
+      flex-grow: 1;
+      
       padding: 20px 24px;
     
       border-right-width: 1px;
@@ -80,35 +107,40 @@
       letter-spacing: 0.03em;
     }
 
-    &__thumb {
-      position: relative;
-      overflow: hidden;
-    }
     
     
   }
   
   .project-list__item {
-    margin-right: 30px;
-    margin-bottom: 30px;
 
-    &:nth-child(3n) {
-      margin-right: 0;
-    }
-    
-    &:nth-last-child(-n + 3) {
+    width: 100%;
+
+    @media screen and (min-width: $tablet) {
+
       margin-bottom: 0;
+      flex-basis: calc((100% - 30px) / 2);
+
+      
+  }
+
+    @media screen and (min-width: $desktop) {
+
+      flex-basis: calc((100% - 2*30px) / 3);
+        
     }
+
   }
   
 
   
   .project-list__link {
-    display: block;
+    @extend %link;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   
-    transition-property: box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: $cubic;
+    transition: box-shadow 250ms $cubic;
 
     &:hover,
     &:focus {

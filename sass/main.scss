@@ -1,10 +1,12 @@
 @import 'utils/variables';
+@import 'utils/placeholders';
+@import 'utils/breakpoints';
 @import 'utils/visually-hidden';
 @import 'base/common';
 @import 'base/reset';
+@import 'components/mobile-menu';
 @import 'components/contacts';
 @import 'components/section';
-@import 'components/subscribe';
 @import 'components/modal';
 @import 'components/form';
 @import 'layout/page-header';

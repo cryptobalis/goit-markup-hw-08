@@ -1,0 +1,177 @@
+.mobile-menu {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 48px 40px;
+    background-color: $primary-white-color;
+    z-index: 999;
+  
+    transform: translateX(-100%);
+    transition: transform 250ms $cubic;
+
+    &.is-open {
+      transform: translateX(0);
+    }
+  
+
+    &__toggle {
+
+      display: inline-flex;
+      margin-left: auto;
+    
+      padding: 0;
+      background-color: transparent;
+    
+    }
+    
+    @media screen and (min-width: $tablet) {
+      &__toggle {
+        display: none;
+      }
+    }
+
+    &__button {
+
+      position: absolute;
+      
+      padding: 10px;
+      background-color: transparent;
+  
+      top: 10px;
+      right: 15px;
+      width: 40px;
+      height: 40px;
+
+      transition-property: fill;
+      transition-duration: 250ms;
+      transition-timing-function: $cubic;
+
+      &:hover,
+      &:focus {
+        fill: $accent-color;
+
+      }
+    }
+
+    &__list {
+      @extend %list;
+      
+        }
+
+    &__item {
+          margin-bottom: 32px;
+      
+          &:last-child {
+            margin-bottom: 0;
+          }
+      
+        }
+
+
+    &__link {
+          @extend %link;
+          
+          display: block;
+          
+          color: $title-text-color;
+          
+          font-weight: 500;
+          font-size: 40px;
+          line-height: 1.175;
+          letter-spacing: 0.02em;
+
+          &--current {
+            color: $accent-color;
+
+            }
+          }
+  }
+
+
+.mobile-contacts {
+  @extend %list;
+
+  margin-top: 302px;
+
+  &__item {
+    margin-bottom: 32px;
+  
+    &:last-child {
+      margin-bottom: 0;
+    }
+  
+  }
+
+  &__link {
+    @extend %link;
+  
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.1666;
+  letter-spacing: 0.02em;
+  
+  color: $primary-text-color;
+  
+  &--accent-color {
+  
+  font-size: 34px;
+  line-height: 1.1764;
+  color: $accent-color;
+  }
+  
+  }
+}
+
+
+
+.mobile-media {
+  @extend %list;
+
+  display: flex;
+
+  margin-top: 64px;
+
+  &__item {
+  
+    &:not(:first-child) {
+      padding-left: 10px;
+    }
+  
+    &:not(:last-child) {
+      padding-right: 10px;
+      border-right: 1px solid $border-input-form;
+  
+    }
+  
+  }
+
+  &__link {
+    @extend %link;
+  
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2222;
+  letter-spacing: 0.02em;
+  
+  color: $accent-color;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+

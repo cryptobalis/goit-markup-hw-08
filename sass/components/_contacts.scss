@@ -19,12 +19,31 @@
 
     }
 
+  }
 
-    &__icon {
-      fill: currentColor;
-      margin-right: 10px;
+
+  .contacts__icon {
+    fill: currentColor;
+    margin-right: 10px;
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      
+      &--envelope-size {
+        width: 14px;
+        height: 10px; 
+    
+      }
+  
+      &--smartphone-size {
+  
+        width: 10px;
+        height: 14px; 
+      }  
     }
   }
+
+  
+ 
  
   
   .contacts__link {

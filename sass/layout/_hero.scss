@@ -3,27 +3,26 @@
     padding-top: 118px;
     padding-bottom: 118px;
     text-align: center;
+
+    @media screen and (min-width: $tablet) {
+
+      max-width: $tablet;
+      }
+ 
+
+    @media screen and (min-width: $desktop) {
+
+      max-width: 1600px;
+
+      padding-top: 200px;
+      padding-bottom: 200px;
+      }
+
   
     margin-left: auto;
     margin-right: auto;
     max-width: $mobile;
-
-
-    @media screen and (min-width: $tablet) {
-
-        max-width: $tablet;
-    }
-   
-
-    @media screen and (min-width: $desktop) {
-
-        max-width: 1600px;
-
-        padding-top: 200px;
-        padding-bottom: 200px;
-    }
-   
-  
+ 
     background-color: $hero-bg-color;
   
     background-image: linear-gradient(
@@ -31,7 +30,57 @@
         $hero-gradient-color,
         $hero-gradient-color
       ),
-      url('../images/HeaderImg.jpg');
+      url('../images/mobile/mobileHero.jpg');
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+          to right,
+          $hero-gradient-color,
+          $hero-gradient-color
+        ), url('../images/mobile/mobileHero@2x.jpg');
+ 
+      }
+
+    @media screen and (min-width: 577px) {
+
+        background-image: linear-gradient(
+          to right,
+          $hero-gradient-color,
+          $hero-gradient-color
+        ),
+        url('../images/tablet/tabletHero.jpg');
+
+        @media (min-resolution: 2dppx) {
+          background-image: linear-gradient(
+            to right,
+            $hero-gradient-color,
+            $hero-gradient-color
+          ), url('../images/tablet/tabletHero@2x.jpg');
+   
+        }
+        
+      }
+
+      @media screen and (min-width: 769px) {
+
+        background-image: linear-gradient(
+          to right,
+          $hero-gradient-color,
+          $hero-gradient-color
+        ),
+        url('../images/desktop/desktopHero.jpg');
+
+        @media (min-resolution: 2dppx) {
+          background-image: linear-gradient(
+            to right,
+            $hero-gradient-color,
+            $hero-gradient-color
+          ), url('../images/desktop/desktopHero@2x.jpg');
+   
+        }
+        
+      }
+
   
     background-repeat: no-repeat;
     background-position: center;

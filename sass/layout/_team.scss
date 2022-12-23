@@ -3,7 +3,12 @@
 
     &__thumb {
       padding-top: 30px;
-      padding-bottom: 30px;
+      padding-bottom: 25px;
+
+      @media screen and (min-width: $desktop) {
+
+        padding-bottom: 30px;
+      }
     }
     
     &__title {

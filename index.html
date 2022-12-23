@@ -50,7 +50,7 @@
         <ul class="contacts">
           <li class="contacts__item">
             <a href="mailto:info@devstudio.com" class="contacts__link">
-              <svg class="contacts__icon" width="16" height="12">
+              <svg class="contacts__icon contacts__icon--envelope-size" width="16" height="12">
                 <use href="./images/sprite.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com</a
@@ -58,7 +58,7 @@
           </li>
           <li class="contacts__item">
             <a href="tel:+380961111111" class="contacts__link">
-              <svg class="contacts__icon" width="10" height="16">
+              <svg class="contacts__icon contacts__icon--smartphone-size" width="10" height="16">
                 <use href="./images/sprite.svg#icon-smartphone"></use></svg
               >+38 096 111 11 11</a
             >
@@ -161,7 +161,59 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img src="./images/teammate1.jpg" alt="Член_команди№1" width="450" height="460" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/teammate1-450.webp    1x,
+                    ./images/mobile/teammate1-450@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/teammate1-450.jpg             1x,
+                    ./images/mobile/teammate1-450.jpg @2x.jpg     2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/teammate1-354.webp    1x,
+                    ./images/tablet/teammate1-354@2x.webp 2x
+                  "
+                  media="(max-width: 1199px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/teammate1-354.jpg     1x,
+                    ./images/tablet/teammate1-3541@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/desktop/teammate1-270.webp    1x,
+                    ./images/desktop/teammate1-270@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desktop/teammate1-270.jpg    1x,
+                    ./images/desktop/teammate1-270@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  class="team-list__icon"
+                  src="./images/mobile/teammate1-450.jpg"
+                  alt="Член_команди№1"
+                />
+              </picture>
               <div class="team__thumb">
                 <h3 class="team__title">Ігор Дем'яненко</h3>
                 <p class="team__position">Product Designer</p>
@@ -195,7 +247,59 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/teammate2.jpg" alt="Член_команди№2" width="450" height="460" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/teammate2-450.webp    1x,
+                    ./images/mobile/teammate2-450@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/teammate2-450.jpg    1x,
+                    ./images/mobile/teammate2-450@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/teammate2-354.webp    1x,
+                    ./images/tablet/teammate2-354@2x.webp 2x
+                  "
+                  media="(max-width: 1199px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desktop/teammate2-354.jpg    1x,
+                    ./images/desktop/teammate2-354@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/desktop/teammate2-270.webp    1x,
+                    ./images/desktop/teammate2-270@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desktop/teammate2-270.jpg    1x,
+                    ./images/desktop/teammate2-270@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  class="team-list__icon"
+                  src="./images/mobile/teammate2-450.jpg"
+                  alt="Член_команди№2"
+                />
+              </picture>
               <div class="team__thumb">
                 <h3 class="team__title">Ольга Рєпіна</h3>
                 <p class="team__position">Frontend Developer</p>
@@ -229,7 +333,59 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/teammate3.jpg" alt="Член_команди№3" width="450" height="460" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/teammate3-450.webp    1x,
+                    ./images/mobile/teammate3-450@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/teammate3-450.jpg    1x,
+                    ./images/mobile/teammate3-450@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/teammate3-354.webp    1x,
+                    ./images/tablet/teammate3-354@2x.webp 2x
+                  "
+                  media="(max-width: 1199px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/teammate3-354.jpg    1x,
+                    ./images/tablet/teammate3-354@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/desktop/teammate3-270.webp    1x,
+                    ./images/desktop/teammate3-270@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desktop/teammate3-270.jpg    1x,
+                    ./images/desktop/teammate3-270@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  class="team-list__icon"
+                  src="./images/mobile/teammate3-450.jpg"
+                  alt="Член_команди№3"
+                />
+              </picture>
               <div class="team__thumb">
                 <h3 class="team__title">Микола Тарасов</h3>
                 <p class="team__position">Marketing</p>
@@ -263,7 +419,59 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/teammate4.jpg" alt="Член_команди№4" width="450" height="460" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/teammate4-450.webp    1x,
+                    ./images/mobile/teammate4-450@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/teammate4-450.jpg    1x,
+                    ./images/mobile/teammate4-450@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/teammate4-354.webp    1x,
+                    ./images/tablet/teammate4-354@2x.webp 2x
+                  "
+                  media="(max-width: 1199px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/teammate4-354.jpg    1x,
+                    ./images/tablet/teammate4-354@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/desktop/teammate4-270.webp    1x,
+                    ./images/desktop/teammate4-270@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desktop/teammate4-270.jpg    1x,
+                    ./images/desktop/teammate4-270@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  class="team-list__icon"
+                  src="./images/mobile/teammate4-450.jpg"
+                  alt="Член_команди№4"
+                />
+              </picture>
               <div class="team__thumb">
                 <h3 class="team__title">Михайло Єрмаков</h3>
                 <p class="team__position">UI Designer</p>

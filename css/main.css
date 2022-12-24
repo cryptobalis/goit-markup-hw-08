@@ -151,7 +151,12 @@ button {
 }
 
 .mobile-contacts {
-  margin-top: 302px;
+  margin-top: 150px;
+}
+@media screen and (min-height: 796px) {
+  .mobile-contacts {
+    margin-top: 302px;
+  }
 }
 .mobile-contacts__item {
   margin-bottom: 32px;

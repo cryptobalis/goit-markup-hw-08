@@ -95,7 +95,11 @@
 .mobile-contacts {
   @extend %list;
 
-  margin-top: 302px;
+  margin-top: 150px;
+
+  @media screen and (min-height: 796px) {
+    margin-top: 302px; 
+  }
 
   &__item {
     margin-bottom: 32px;

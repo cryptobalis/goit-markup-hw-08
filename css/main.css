@@ -160,15 +160,27 @@ button {
 }
 .mobile-contacts__link {
   font-weight: 500;
-  font-size: 24px;
-  line-height: 1.1666;
+  font-size: 18px;
+  line-height: 1.222;
   letter-spacing: 0.02em;
   color: #757575;
 }
+@media screen and (min-width: 480px) {
+  .mobile-contacts__link {
+    font-size: 24px;
+    line-height: 1.1666;
+  }
+}
 .mobile-contacts__link--accent-color {
-  font-size: 34px;
-  line-height: 1.1764;
+  font-size: 24px;
+  line-height: 1.1666;
   color: #2196f3;
+}
+@media screen and (min-width: 480px) {
+  .mobile-contacts__link--accent-color {
+    font-size: 34px;
+    line-height: 1.1764;
+  }
 }
 
 .mobile-media {
@@ -186,10 +198,16 @@ button {
 }
 .mobile-media__link {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 1.2222;
+  font-size: 10.5px;
+  line-height: 1.1666;
   letter-spacing: 0.02em;
   color: #2196f3;
+}
+@media screen and (min-width: 480px) {
+  .mobile-media__link {
+    font-size: 18px;
+    line-height: 1.2222;
+  }
 }
 
 .contacts {

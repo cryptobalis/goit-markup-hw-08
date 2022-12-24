@@ -39,11 +39,9 @@
 
       @media screen and (min-width: $desktop) {
 
-        text-align: left;
-        
+        text-align: left;   
       }
     }
-
   }
 
 
@@ -69,12 +67,16 @@
       @extend %list;
 
       text-align: center;
+    }
 
+    &__item {
       @media screen and (min-width: $desktop) {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;   
-      }
+        text-align: left;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
     }
   }
 
@@ -85,7 +87,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 1.714;
+    line-height: 1.1428;
     letter-spacing: 0.03em;
 
     &--address {
@@ -127,6 +129,10 @@
 
     &__join {
       text-align: center;
+
+      @media screen and (min-width: $desktop) {
+        text-align: left; 
+    }
 
       margin-bottom: 20px;
   
@@ -188,14 +194,18 @@
     &__title {
 
         text-align: center;
-      margin-bottom: 20px;
+
+        @media screen and (min-width: $desktop) {
+          text-align: left;
+      }
+          margin-bottom: 20px;
     
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 16px;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      color: $primary-white-color;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 16px;
+          letter-spacing: 0.03em;
+          text-transform: uppercase;
+          color: $primary-white-color;
     }
   
     &__icon {
@@ -206,17 +216,27 @@
   
   
   .footer-subscribe__input {
-    padding: 15px 16px;
+
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
 
     margin-bottom: 20px;
+    padding: 15px 16px;
+ 
   
-    width: 450px;
+    width: 100%;
+    max-width: 450px;
     height: 50px;
 
+    @media screen and (min-width: $tablet) {
+
+      width: 450px;      
+  }
 
     @media screen and (min-width: $desktop) {
 
-        width: 358px;
+        max-width: 358px;
         
     }
    
@@ -252,7 +272,8 @@
         
     }
     
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height: 50px;
       
     font-weight: 700;
